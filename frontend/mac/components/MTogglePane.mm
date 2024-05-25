@@ -67,6 +67,7 @@
     
     _initializing = NO;
     _relayouting = NO;
+    self.clipsToBounds = YES;
   }
   return self;
 }
@@ -134,6 +135,7 @@
                                                object: _content];
     subview.frameOrigin = NSMakePoint(0, HEADER_HEIGHT);
     subview.autoresizingMask = NSViewWidthSizable | NSViewMaxYMargin;
+    subview.clipsToBounds=YES;
     [self relayout];
   }
 }
